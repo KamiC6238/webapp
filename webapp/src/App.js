@@ -13,6 +13,11 @@ function App() {
       <HashRouter>
         <GlobalStyle />
         <IconStyle />
+        {/*
+          renderRoutes只会渲染一层路由组件，所以如果有子路由，那么是不会被渲染出来的，
+          需要到这个路由对应的组件下再次使用一次renderRouets(route.routes)来渲染
+          第二层路由组件 
+         */}
         { renderRoutes (routes) }
       </HashRouter>
     </Provider>
