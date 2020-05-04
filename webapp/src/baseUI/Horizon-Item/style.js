@@ -19,7 +19,7 @@ export const List = styled.div`
 
 export const ListItem = styled.span`
   flex: 0 0 auto;
-  font-size: ${style ["font-size-m"]};
+  font-size: ${style["font-size-m"]};
   padding: 5px 8px;
   &.selected {
     color: ${style['theme-color']};
