@@ -28,7 +28,9 @@ const Singers = props => {
   } = props
 
   useEffect(() => {
-    getHotSingerDispatch()
+    if (!singerList.size) {
+      getHotSingerDispatch()
+    }
   }, [])
 
   let handleUpdateAlpha = val => {

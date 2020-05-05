@@ -26,3 +26,7 @@ export const getSingerListRequest = (category, alpha, count) => {
     }
   })
 }
+
+export const getRankListRequest = () => {
+  return axiosInstance.get('/toplist/detail')
+}
