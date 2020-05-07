@@ -5,6 +5,7 @@ import Scroll from '../../components/Scroll/index'
 import { Content } from '../../components/Scroll/style'
 import { connect } from 'react-redux'
 import { forceCheck } from 'react-lazyload'
+import { renderRoutes } from 'react-router-config'
 import Loading from '../../baseUI/Loading/index'
 import * as actionCreators from './store/actionCreators'
 
@@ -30,7 +31,6 @@ const Recommend = props => {
   // 使用了immutable的时候，在使用数据时如果不使用toJS转换成普通js对象会出错。
   const bannerListJS = bannerList ? bannerList.toJS() : []
   const recommendListJS = recommendList ? recommendList.toJS() : []
-
   return (
     <Content>
       {/* 监听滚动事件, 滚动的时候触发事件, 这样之前未加载的图片就能加载出来了 */}
@@ -41,6 +41,7 @@ const Recommend = props => {
         </div>
       </Scroll>
       { enterLoading ? <Loading></Loading> : null }
+      { renderRoutes(props.route.routes) }
     </Content>
   )
 }
