@@ -7,7 +7,7 @@ const Header = forwardRef((props, ref) => {
   return (
     <HeaderContainer>
       <i className="iconfont back" onClick={handleClick}>&#xe6a9;</i>
-      <h1>{title}</h1>
+      <h1 onClick={handleClick}>{title}</h1>
     </HeaderContainer>
   )
 })

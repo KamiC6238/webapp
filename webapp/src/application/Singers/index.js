@@ -9,7 +9,6 @@ import {
   getHotSingerList,
   changeEnterLoading,
   changePageCount,
-  refreshMoreSingerList,
   changePullUpLoading,
   changePullDownLoading,
   refreshMoreHotSingerList
@@ -19,7 +18,7 @@ const Singers = props => {
   let [category, setCategory] = useState('')
   let [alpha, setAlpha] = useState('')
 
-  const { singerList, enterLoading, pullUpLoading, pullDownLoading, pageCount } = props
+  const { singerList, pullUpLoading, pullDownLoading, pageCount } = props
   const {
     getHotSingerDispatch,
     updateDispatch,
